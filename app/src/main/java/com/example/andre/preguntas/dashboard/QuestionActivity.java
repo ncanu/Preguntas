@@ -61,7 +61,7 @@ public class QuestionActivity extends Activity {
         int selectedId = group.getCheckedRadioButtonId();
         // find the radiobutton by returned id
 
-        RadioButton radioButton = findViewById(selectedId);
+        RadioButton radioButton;
 
         // find the radiobutton by returned id
         radioButton = (RadioButton) findViewById(selectedId);
@@ -81,6 +81,7 @@ public class QuestionActivity extends Activity {
 
         group.removeAllViews();
         questionNumber = questionNumber+1;
+
         Question question = getQuestion(questionNumber);
 
         if(question==null)
@@ -112,59 +113,104 @@ public class QuestionActivity extends Activity {
         Answer answer1 = new Answer();
         Answer answer2 = new Answer();
         Answer answer3 = new Answer();
-        Answer answer4 = new Answer();
+
         switch (index)
         {
 
 
             case 1:
                 //Pregunta 1
+                question1 = new Question();
+                answers1= new ArrayList<>();
+                answer1 = new Answer();
+                answer2 = new Answer();
+                answer3 = new Answer();
+
 
                 answer1.setId(1L);
-                answer1.setAnswerDescription("Es un concepto similar al de 'array");
+                answer1.setAnswerDescription("British Home Championship");
 
                 answer2.setId(2L);
-                answer2.setAnswerDescription("Es un tipo particular de variable");
+                answer2.setAnswerDescription("FA Cup");
 
                 answer3.setId(3L);
-                answer3.setAnswerDescription("Es un modelo o plantilla a partir de la cual creamos objetos");
+                answer3.setAnswerDescription("Copa América");
 
-                answer4.setId(4L);
-                answer4.setAnswerDescription("Es una categoria de datos ordenada secuencialmente");
 
-                question1.setQuestion("1- ¿Cuál es la descripción que crees que define mejor el concepto 'clase' en la programación orientada a objetos?");
+                question1.setQuestion("¿Cuál es el torneo entre selecciones nacionales más antiguo de la historia del fútbol?");
                 answers1.add(answer1);
                 answers1.add(answer2);
                 answers1.add(answer3);
-                answers1.add(answer4);
+
                 question1.setAnswers(answers1);
-                question1.setAnswerText("Es un concepto similar al de 'array");
+                question1.setAnswerText("Copa América");
                 question1.setAnswerIndex(1);
                 activeQuestion = question1;
+
+
 
                 return question1;
 
 
             case 2:
                 //Pregunta 2
+                question1 = new Question();
+                answers1= new ArrayList<>();
+                answer1 = new Answer();
+                answer2 = new Answer();
+                answer3 = new Answer();
+
+
+
                 answer1.setId(2L);
-                answer1.setAnswerDescription("Sus cardinalidad y su tipo");
+                answer1.setAnswerDescription("Club Atlético Independiente");
 
                 answer2.setId(2L);
-                answer2.setAnswerDescription("Sus atributos y sus métodos");
+                answer2.setAnswerDescription("Boca Juniors");
 
                 answer3.setId(3L);
-                answer3.setAnswerDescription("La forma en que establece comunicación e intercambia mensajes ");
+                answer3.setAnswerDescription("Peñarol");
 
-                answer4.setId(4L);
-                answer4.setAnswerDescription("Su interfaz y los eventos asociados");
-
-                question1.setQuestion("2- ¿Qué elementos crees que definen a un objeto?");
+                question1.setQuestion("¿Cuál ha sido el equipo que más Copas Libertadores de América ha ganado en la historia?");
                 answers1.add(answer1);
                 answers1.add(answer2);
                 answers1.add(answer3);
-                answers1.add(answer4);
-                question1.setAnswerText("Sus cardinalidad y su tipo");
+
+                question1.setAnswerText("Club Atlético Independiente");
+                question1.setAnswers(answers1);
+                question1.setAnswerIndex(2);
+                activeQuestion = question1;
+
+
+
+                return question1;
+
+            case 3:
+                //Pregunta 2
+
+                question1 = new Question();
+                answers1= new ArrayList<>();
+                answer1 = new Answer();
+                answer2 = new Answer();
+                answer3 = new Answer();
+
+
+
+                answer1.setId(3L);
+                answer1.setAnswerDescription("Brasil 2014");
+
+                answer2.setId(2L);
+                answer2.setAnswerDescription("Uruguay 1930");
+
+                answer3.setId(3L);
+                answer3.setAnswerDescription("Brasil 1950");
+
+                question1.setQuestion("¿A qué Mundial corresponde el famoso hecho del \"Maracanazo\"?");
+                answers1.add(answer1);
+                answers1.add(answer2);
+                answers1.add(answer3);
+
+                question1.setAnswerText("Brasil 1950");
                 question1.setAnswers(answers1);
                 question1.setAnswerIndex(2);
                 activeQuestion = question1;
@@ -172,8 +218,226 @@ public class QuestionActivity extends Activity {
                 return question1;
 
 
+            case 4:
+                //Pregunta 2
+
+                question1 = new Question();
+                answers1= new ArrayList<>();
+                answer1 = new Answer();
+                answer2 = new Answer();
+                answer3 = new Answer();
 
 
+
+                answer1.setId(4L);
+                answer1.setAnswerDescription("Azteca");
+
+                answer2.setId(2L);
+                answer2.setAnswerDescription("Telstar");
+
+                answer3.setId(3L);
+                answer3.setAnswerDescription("Tango");
+
+                question1.setQuestion("¿Cuál fue el nombre del balón oficial con el que se jugó México 70?");
+                answers1.add(answer1);
+                answers1.add(answer2);
+                answers1.add(answer3);
+
+                question1.setAnswerText("Telstar");
+                question1.setAnswers(answers1);
+                question1.setAnswerIndex(2);
+                activeQuestion = question1;
+
+                return question1;
+
+
+            case 5:
+                //Pregunta 2
+
+                question1 = new Question();
+                answers1= new ArrayList<>();
+                answer1 = new Answer();
+                answer2 = new Answer();
+                answer3 = new Answer();
+
+
+
+                answer1.setId(2L);
+                answer1.setAnswerDescription("Inglaterra 1966");
+
+                answer2.setId(2L);
+                answer2.setAnswerDescription("México 1970");
+
+                answer3.setId(3L);
+                answer3.setAnswerDescription("España 1982");
+
+                question1.setQuestion("¿En qué Mundial de Fútbol fueron incorporadas las tarjetas para sancionar a los jugadores?");
+                answers1.add(answer1);
+                answers1.add(answer2);
+                answers1.add(answer3);
+
+                question1.setAnswerText("México 1970");
+                question1.setAnswers(answers1);
+                question1.setAnswerIndex(2);
+                activeQuestion = question1;
+
+                return question1;
+
+            case 6:
+                //Pregunta 2
+                question1 = new Question();
+                answers1= new ArrayList<>();
+                answer1 = new Answer();
+                answer2 = new Answer();
+                answer3 = new Answer();
+
+
+
+                answer1.setId(2L);
+                answer1.setAnswerDescription("Lionel Messi");
+
+                answer2.setId(2L);
+                answer2.setAnswerDescription("Zlatan Ibrahimovic");
+
+                answer3.setId(3L);
+                answer3.setAnswerDescription("Cristiano Ronaldo");
+
+                question1.setQuestion("¿Quién ha sido el máximo goleador de la Liga de Campeones o Copa de Campeones de Europa desde su inicio en 1955?");
+                answers1.add(answer1);
+                answers1.add(answer2);
+                answers1.add(answer3);
+
+                question1.setAnswerText("Cristiano Ronaldo");
+                question1.setAnswers(answers1);
+                question1.setAnswerIndex(2);
+                activeQuestion = question1;
+
+                return question1;
+
+            case 7:
+                //Pregunta 2
+                question1 = new Question();
+                answers1= new ArrayList<>();
+                answer1 = new Answer();
+                answer2 = new Answer();
+                answer3 = new Answer();
+
+
+
+                answer1.setId(2L);
+                answer1.setAnswerDescription("Ocho");
+
+                answer2.setId(2L);
+                answer2.setAnswerDescription("Siete");
+
+                answer3.setId(3L);
+                answer3.setAnswerDescription("Nueve");
+
+                question1.setQuestion("¿Cuántos jugadores por equipo debe haber mínimo en la cancha para que empiece el partido?");
+                answers1.add(answer1);
+                answers1.add(answer2);
+                answers1.add(answer3);
+
+                question1.setAnswerText("Siete");
+                question1.setAnswers(answers1);
+                question1.setAnswerIndex(2);
+                activeQuestion = question1;
+
+                return question1;
+
+
+            case 8:
+                //Pregunta 2
+
+                question1 = new Question();
+                answers1= new ArrayList<>();
+                answer1 = new Answer();
+                answer2 = new Answer();
+                answer3 = new Answer();
+
+
+                answer1.setId(2L);
+                answer1.setAnswerDescription("Una cada uno");
+
+                answer2.setId(2L);
+                answer2.setAnswerDescription("Ninguna");
+
+
+                question1.setQuestion("¿Cuántas veces Pelé y Maradona ganaron la Copa América?");
+                answers1.add(answer1);
+                answers1.add(answer2);
+
+                question1.setAnswerText("Ninguna");
+                question1.setAnswers(answers1);
+                question1.setAnswerIndex(2);
+                activeQuestion = question1;
+
+                return question1;
+
+            case 9:
+                //Pregunta 2
+
+                question1 = new Question();
+                answers1= new ArrayList<>();
+                answer1 = new Answer();
+                answer2 = new Answer();
+                answer3 = new Answer();
+
+
+                answer1.setId(2L);
+                answer1.setAnswerDescription("38");
+
+                answer2.setId(2L);
+                answer2.setAnswerDescription("64");
+
+                answer3.setId(3L);
+                answer3.setAnswerDescription("52");
+
+                question1.setQuestion("¿Cuántos partidos se disputaron en el pasado Mundial de Brasil 2014?");
+                answers1.add(answer1);
+                answers1.add(answer2);
+                answers1.add(answer3);
+
+                question1.setAnswerText("64");
+                question1.setAnswers(answers1);
+                question1.setAnswerIndex(2);
+                activeQuestion = question1;
+
+                return question1;
+
+
+            case 10:
+                //Pregunta 2
+
+                question1 = new Question();
+                answers1= new ArrayList<>();
+                answer1 = new Answer();
+                answer2 = new Answer();
+                answer3 = new Answer();
+
+
+                answer1.setId(2L);
+                answer1.setAnswerDescription("Uruguay");
+
+                answer2.setId(2L);
+                answer2.setAnswerDescription("Brasil");
+
+                answer3.setId(3L);
+                answer3.setAnswerDescription("Chile");
+
+                question1.setQuestion("¿Cuál equipo fue el campeón de la primera Copa América en 1916?");
+                answers1.add(answer1);
+                answers1.add(answer2);
+                answers1.add(answer3);
+
+                question1.setAnswerText("Uruguay");
+                question1.setAnswers(answers1);
+                question1.setAnswerIndex(2);
+                activeQuestion = question1;
+
+
+
+                return question1;
 
 
 
